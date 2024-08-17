@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import News from './pages/News';
+import Team from './pages/Team';
 
-function App() {
+const App = () => {
+  const news = [
+    // Sample news data
+  ];
+
+  const team = [
+    // Sample team data
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home news={news} />} />
+        <Route path="/news" element={<News news={news} />} />
+        <Route path="/team" element={<Team team={team} />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;

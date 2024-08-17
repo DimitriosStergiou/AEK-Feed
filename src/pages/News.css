@@ -1,0 +1,38 @@
+.news-container {
+    padding: 20px;
+  }
+  
+  .news-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px; /* Space between the two rows */
+  }
+  
+  .news-item {
+    width: 30%; /* Each item takes up about 30% of the row's width */
+    margin-bottom: 20px;
+    text-align: center; /* Center text and image */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+  }
+  
+  .news-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    object-fit: cover; /* Ensure images maintain their aspect ratio */
+  }
+  
+  @media (max-width: 768px) {
+    .news-item {
+      width: 48%; /* Adjust the width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .news-item {
+      width: 100%; /* Full width on very small screens */
+    }
+  }
+  
+  
